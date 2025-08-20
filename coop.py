@@ -79,7 +79,7 @@ def img_link_extraction(img_url_make):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
         'Accept': '*/*',
     }
-    token = 'f42a5b59aec3467e97a8794c611c436b91589634343'
+    token = ''
     scrape_do_url = f'http://api.scrape.do?token={token}&url={urllib.parse.quote(img_url_make)}'
 
     img_url_req = requests.get(scrape_do_url,headers=headers)
@@ -181,7 +181,7 @@ def pl_link_extraction(category_url):
 
 def pdp_data_extraction(input_link):
     try:
-        token = "f42a5b59aec3467e97a8794c611c436b91589634343"
+        token = ""
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
             'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
@@ -303,6 +303,7 @@ def pdp_data_extraction(input_link):
             return item
     except Exception as e:
         print(sys.exc_info()[2].tb_lineno)
+
 
 
 # coop_main("wine")
