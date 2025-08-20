@@ -18,7 +18,7 @@ headers_lock2 = threading.Lock()
 got_pro_id_list = []
 ids_list = []
 
-# token = "f42a5b59aec3467e97a8794c611c436b91589634343"
+# token = ""
 # proxyModeUrl = "http://{}:@proxy.scrape.do:8080".format(token)
 # proxies = {
 #     "http": proxyModeUrl,
@@ -461,4 +461,5 @@ def migros_main(slug):
         else:
             return []
     else:
+
         migros_main(slug)
